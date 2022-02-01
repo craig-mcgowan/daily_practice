@@ -28,7 +28,7 @@ const timesVisible = (h, bounce, window) => {
   //check to see if window is greater than 0 but less than h
   //check to see if h is greater than window
   //check to see if bounce is between 0 and 1
-  if (window < 0 || h < window || bounce < 0 || bounce > 1) {
+  if (window < 0 || h <= window || bounce < 0 || bounce >= 1) {
     return -1
   }  
   let count = 1
@@ -39,5 +39,5 @@ const timesVisible = (h, bounce, window) => {
   }
 
   return count
-
 }
+
