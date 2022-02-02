@@ -3,5 +3,5 @@
 def find_needle(haystack):
     # your code here
     needle = str(haystack.index("needle"))
-    return "found the needle at position "+ needle
+    return "found the needle at position " + needle
     
