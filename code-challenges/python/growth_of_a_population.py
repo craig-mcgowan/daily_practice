@@ -7,6 +7,6 @@ def nb_year(p0, percent, aug, p):
     # return range(p0, p, math.floor((p0*(percent/100)+aug))).len()
     years = 0
     while p0 < p:
-      p0 = p0*1+percent/100+aug
+      p0 = int(p0*1+(percent/100))+ aug
       years+=1
     return years
