@@ -10,3 +10,9 @@ def find_next_square(sq):
         sq+=1
     return sq
     
+# much cooler/more performative solution
+def find_next_square(sq):
+    root = sq ** 0.5
+    if root.is_integer():
+        return (root + 1)**2
+    return -1
