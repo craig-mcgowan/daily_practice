@@ -6,3 +6,8 @@ def reverse_seq(n):
     return results_arr
 
 # .append() is equivalent to Javascripts .push()
+
+
+#better to do it with range based on answers
+def reverse_seq(n):
+  return range(n,0,-1)
