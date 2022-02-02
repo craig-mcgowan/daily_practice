@@ -36,8 +36,18 @@ board_games = ["Settlers of Catan", "Carcassone", "Power Grid", "Agricola", "Scr
 
 sport_games = ["football", "hockey", "baseball", "cricket"]
 
+# Remember that a block of code is differentiated by indenting!
 for game in board_games:
   print(game)
 
 for game in sport_games:
   print(game)
+
+promise = "I will finish the python loops module!"
+
+for i in range(5):
+  print(promise)
+
+countdown = 10
+while countdown >= 0: print(countdown); countdown -= 1
+print("We have liftoff!")
