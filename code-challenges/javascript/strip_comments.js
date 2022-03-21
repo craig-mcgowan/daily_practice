@@ -15,6 +15,22 @@ bananas
 The code would be called like so:
 
 var result = solution("apples, pears # and bananas\ngrapes\nbananas !apples", ["#", "!"])
-// result should == "apples, pears\ngrapes\nbananas"
+result should == "apples, pears\ngrapes\nbananas"
 */
+function solution(input, markers) {
+  console.log(input, markers)
 
+  return input.split('\n').map(line => {
+    for (marker of markers) {
+      let index = line.indexOf(marker)
+      if (index !== -1) {
+        line = line.slice(0,index)
+      }
+      
+    }
+    line = line.trimEnd()
+    return line
+    }).join("\n")
+  
+  
+};
