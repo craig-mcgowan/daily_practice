@@ -13,19 +13,25 @@
 // Also, beware of plateaus !!! [1, 2, 2, 2, 1] has a peak while [1, 2, 2, 2, 3] and [1, 2, 2, 2, 2] do not. In case of a plateau-peak, please only return the position and value of the beginning of the plateau. For example: pickPeaks([1, 2, 2, 2, 1]) returns {pos: [1], peaks: [2]} (or equivalent in other languages)
 
 // Have fun!
-
 function pickPeaks(arr) {
   console.log(arr);
-  let result = { pos: [], peaks: [] };
+  const result = { pos: [], peaks: [] };
 
-  let peaks = arr.forEach((num, i) => {
-    if (i === arr.length) return;
+  arr.forEach((num, i) => {
+    if (i === arr.length - 1 || i === 0) return;
     if (num < arr[i + 1] || num < arr[i - 1]) return;
+    if (num === arr[i - 1]) return;
+    let x = i + 1;
+    while (num === arr[x]) {
+      if (num < arr[x + 1] || x === arr.length - 1) return;
+      x++;
+    }
     console.log(`${num} ${i}`);
-    result.pos.push[i];
-    result.peaks.push[num];
-    
-  }, []);
+    result.pos.push(i);
+    console.log(result.pos);
+    result.peaks.push(num);
+  });
+  console.log(result);
 
   return result;
 }
