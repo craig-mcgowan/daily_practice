@@ -2,13 +2,14 @@
 
 function firstNonRepeatingLetter(s) {
   // Add your code here
-  const mapS = new Map()
+  console.log(s);
+  const mapS = new Map();
 
   for (let i = 0; i < s.length; i++) {
-    mapS.set(s[i].toLowerCase(),i)
-
+    mapS.set(s[i].toLowerCase(), i);
   }
-  for (char in mapS) {
-    if (char.length = 1) return char
+  console.log(mapS);
+  for (char of mapS) {
+    if ((char.length = 1)) return char[0];
   }
 }
