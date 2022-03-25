@@ -1,0 +1,3 @@
+function getGeneration(cells, generations) {
+  
+}
