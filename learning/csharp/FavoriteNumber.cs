@@ -7,10 +7,9 @@ namespace FavoriteNumber
     static void Main(string[] args)
     {
       // Ask user for fave number
-      Console.Write("Enter your favorite number!: ");
-      int faveNumber = Convert.ToInt32(Console.ReadLine());
       // Turn that answer into an int
-      
+      Console.Write("Enter your favorite number!: ");
+      int faveNumber = Convert.ToInt32(Console.ReadLine());      
 
 
 
