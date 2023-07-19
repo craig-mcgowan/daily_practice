@@ -6,4 +6,14 @@ function workNeeded(projectMinutes, freelancers) {
     0
   )
   console.log(totalFreelancerTime);
+
+  if (totalFreelancerTime >= projectMinutes) {
+    return "Easy Money!"
+  }
+  
+  const deltaMinutes = projectMinutes - totalFreelancerTime
+
+  const hoursNeeded = Math.floor((deltaMinutes)/60)
+  const minutesNeeded = deltaMinutes % 60
+  return `I need to work ${hoursNeeded} hour(s) and ${minutesNeeded} minute(s)`
 }
